@@ -1,0 +1,3 @@
+<view class="el-container {{ direction === 'vertical' ? 'is-vertical' : '' }}">
+  <slot />
+</view>

@@ -1,0 +1,54 @@
+<view 
+  class="{{`
+    ${type === 'textarea' ? 'el-textarea' : 'el-input'}
+    el-input--${size}
+    ${disabled ? 'is-disabled' : ''}
+    ${prefixIcon ? 'el-input--prefix' : ''}
+    ${suffixIcon ? 'el-input--suffix' : ''}
+  `}}"
+>
+  <block a:if="{{ type !== 'textarea' }}">
+    <view
+      a:if="{{ prefixIcon }}"
+      class="el-input__prefix"
+    >
+      <text class="el-input__icon el-input__prefix-inner {{ prefixIcon }}" />
+    </view>
+    <input
+      class="el-input__inner"
+      value="{{ value }}"
+      model:value={{ value }}
+      onChange="handleInput"
+      htmlType="{{ type }}"
+      readOnly="{{ readonly }}"
+      disabled="{{ disabled }}"
+      autoFocus="{{ autofocus }}"
+      maxLength="{{ maxlength }}"
+      placeholder="{{ placeholder }}"
+      trim="{{ trim }}"
+      onFocus="focus"
+      onBlur="blur"
+    />
+    <view
+      a:if="{{ suffixIcon }}"
+      class="el-input__suffix"
+    >
+      <text class="el-input__icon el-input__suffix-inner {{ suffixIcon }}" />
+    </view>
+  </block>
+  <textarea
+    a:else
+    class="el-textarea__inner"
+    value="{{ value }}"
+    onChange="handleInput"
+    readOnly="{{ readonly }}"
+    disabled="{{ disabled }}"
+    autoFocus="{{ autofocus }}"
+    maxLength="{{ maxlength }}"
+    placeholder="{{ placeholder }}"
+    trim="{{ trim }}"
+    autoHeight="{{ autoHeight }}"
+    onFocus="{{ focus }}"
+    onBlur="{{ blur }}"
+  />
+</view>

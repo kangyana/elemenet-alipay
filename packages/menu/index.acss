@@ -1,0 +1,9 @@
+.el-menu-item {
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+}
+.is-active {
+  color: #409EFF;
+  background: #ecf5ff;
+}

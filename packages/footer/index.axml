@@ -1,0 +1,3 @@
+<view class="el-footer" style="height: {{ height }}">
+  <slot />
+</view>

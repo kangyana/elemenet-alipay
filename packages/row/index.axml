@@ -1,0 +1,3 @@
+<view class="el-row">
+  <slot />
+</view>

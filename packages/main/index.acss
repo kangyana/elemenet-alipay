@@ -1,0 +1,8 @@
+.el-main {
+  display: block;
+  flex: 1;
+  flex-basis: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}

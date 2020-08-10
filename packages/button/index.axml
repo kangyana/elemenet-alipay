@@ -1,0 +1,18 @@
+<view
+  class="el-button {{`
+    el-button--${type}
+    el-button--${size}
+    ${disabled ? 'is-disabled' : '' }
+    ${loading ? 'is-loading' : '' }
+    ${plain ? 'is-plain' : '' }
+    ${round ? 'is-round' : '' }
+    ${circle ? 'is-circle' : '' }
+  `}}"
+  onTap="tap"
+>
+  <text a:if="{{ loading }}" class="el-icon-loading" />
+  <text a:if="{{ icon && !loading }}" class="{{ icon }}" />
+  <text a:if="{{ hasSlots }}" class="content">
+    <slot />
+  </text>
+</view>

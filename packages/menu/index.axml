@@ -1,0 +1,11 @@
+<view class="el-menu">
+  <view
+    a:for="{{ menus }}"
+    key={{ item.key }}
+    onTap="change"
+    data-key="{{ item.key }}"
+    class="el-menu-item {{ defaultActive === item.key ? 'is-active' : '' }}"
+  >
+    {{ item.name }}
+  </view
+</view>

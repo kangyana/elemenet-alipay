@@ -1,0 +1,39 @@
+<view
+  class="el-select {{`
+    el-select--${size}
+  `}}"
+>
+  <el-input
+    value="{{ selectLabel }}"
+    placeholder="{{ placeholder }}"
+    onFocus="handleOptions"
+    onBlur="handleOptions"
+    disabled="{{ disabled }}"
+    suffix-icon="el-select__caret el-icon-arrow-up {{ optionsVisible ?　'is-reverse' : '' }}"
+  />
+  <view
+    a:if="{{ optionsVisible }}"
+    class="el-select-dropdown"
+  >
+    <view
+      a:if="{{ dataSource.length }}"
+      class="el-select-dropdown__list"
+    >
+      <view
+        a:for="{{ dataSource }}"
+        key="{{ item.value }}"
+        class="el-select-dropdown__item {{ selectValue === item.value ? 'selected' : '' }}"
+        onTap="handleInput"
+        data-row="{{ item }}"
+      >
+        {{ item.label }}
+      </view>
+    </view>
+    <view
+      a:else
+      class="el-select-dropdown__empty"
+    >
+      无数据
+    </view>
+  </view>
+</view>
