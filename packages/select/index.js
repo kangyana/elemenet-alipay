@@ -7,17 +7,11 @@ Component({
   },
   data: {
     optionsVisible: false,
-    selectValue: '',
-    selectLabel: '',
   },
   methods: {
     handleInput(e) {
       const { onInput } = this.props
-      const { value, label } = e.target.dataset.row
-      this.setData({
-        selectValue: value,
-        selectLabel: label
-      })
+      const { value } = e.target.dataset.row
       if (onInput) {
         onInput(value)
       }
@@ -28,17 +22,5 @@ Component({
       const { optionsVisible } = this.data
       this.setData({ optionsVisible: !optionsVisible })
     },
-    getValue() {
-      const { value, dataSource } = this.props
-      const row = dataSource.find(v => v.value === value)
-      if (!row) return
-      this.setData({
-        selectValue: row.value,
-        selectLabel: row.label
-      })
-    }
   },
-  didMount() {
-    this.getValue()
-  }
 })

@@ -1,10 +1,11 @@
+<import-sjs name="selectjs" from="./index.sjs" />
 <view
   class="el-select {{`
     el-select--${size}
   `}}"
 >
   <el-input
-    value="{{ selectLabel }}"
+    value="{{ selectjs.getLabel(value, dataSource) }}"
     placeholder="{{ placeholder }}"
     onFocus="handleOptions"
     onBlur="handleOptions"
@@ -22,7 +23,7 @@
       <view
         a:for="{{ dataSource }}"
         key="{{ item.value }}"
-        class="el-select-dropdown__item {{ selectValue === item.value ? 'selected' : '' }}"
+        class="el-select-dropdown__item {{ value === item.value ? 'selected' : '' }}"
         onTap="handleInput"
         data-row="{{ item }}"
       >
