@@ -1,0 +1,60 @@
+<import-sjs name="tablejs" from="./index.sjs" />
+<view
+  class="el-table {{`
+    ${border ? 'el-table--border' : ''}
+  `}}"
+>
+  <slot x="{{ 2333 }}">
+    <view>default slot & default value</view>
+  </slot>
+  <view class="el-table__header has-gutter is-leaf">
+    <view
+      class="el-table__column"
+    >
+      <view class="cell">日期</view>
+    </view>
+    <view class="el-table__column">
+      <view class="cell">姓名</view>
+    </view>
+    <view class="el-table__column">
+      <view class="cell">地址</view>
+    </view>
+  </view>
+  <view class="el-table__body-wrapper">
+    <view class="el-table__body">
+      <view class="el-table__row is-leaf">
+        <view class="el-table__column">
+          <view class="cell">2016-05-02</view>
+        </view>
+        <view class="el-table__column">
+          <view class="cell">王小虎</view>
+        </view>
+        <view class="el-table__column">
+          <view class="cell">上海市普陀区金沙江路 1518 弄</view>
+        </view>
+      </view>
+      <view class="el-table__row is-leaf">
+        <view class="el-table__column">
+          <view class="cell">2016-05-02</view>
+        </view>
+        <view class="el-table__column">
+          <view class="cell">王小虎</view>
+        </view>
+        <view class="el-table__column">
+          <view class="cell">上海市普陀区金沙江路 1518 弄</view>
+        </view>
+      </view>
+      <view class="el-table__row">
+        <view class="el-table__column">
+          <view class="cell">2016-05-02</view>
+        </view>
+        <view class="el-table__column">
+          <view class="cell">王小虎</view>
+        </view>
+        <view class="el-table__column">
+          <view class="cell">上海市普陀区金沙江路 1518 弄</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
