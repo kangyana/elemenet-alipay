@@ -1,0 +1,20 @@
+<view a:if="{{visible}}" class="el-dialog__wrapper">
+  <view 
+    class="el-dialog {{
+      customClass
+    }}"
+    style="margin-top: {{top}}; width: {{width}};"
+  >
+    <view class="el-dialog__header">
+      <view class="el-dialog__title">{{title}}</view>
+      <view class="el-dialog__headerbtn" catchTap="handleClose">
+        <text class="el-dialog__close el-icon-close"></text>
+      </view>
+    </view>
+    <view class="el-dialog__body">
+      <slot />
+    </view>
+    <slot name="footer" />
+    </view>
+  </view>
+</view>

@@ -4,57 +4,40 @@
     ${border ? 'el-table--border' : ''}
   `}}"
 >
-  <slot x="{{ 2333 }}">
-    <view>default slot & default value</view>
-  </slot>
   <view class="el-table__header has-gutter is-leaf">
-    <view
-      class="el-table__column"
+    <el-table-column
+      a:for="{{ columns }}"
+      key="{{ item.key }}"
+      width="{{ item.width }}"
     >
-      <view class="cell">日期</view>
-    </view>
-    <view class="el-table__column">
-      <view class="cell">姓名</view>
-    </view>
-    <view class="el-table__column">
-      <view class="cell">地址</view>
+      {{ item.title }}
+    </el-table-column>
+  </view>
+  <view a:if="{{ dataSource.length }}" class="el-table__body-wrapper">
+    <view class="el-table__body">
+      <view
+        class="el-table__row is-leaf"
+        a:for="{{ dataSource }}"
+        a:for-item="dataSourceItem"
+        a:for-index="dataSourceIndex"
+        key="{{ dataSourceItem.id }}"
+      >
+        <el-table-column
+          a:for="{{ columns }}"
+          key="{{ item.key }}"
+          width="{{ item.width }}"
+        >
+          <block a:if="{{ item.dataIndex }}">{{ dataSourceItem[item.dataIndex] || '-' }}</block>
+          <block a:else>
+            <slot name="{{ item.scopedSlots }}" row="{{ dataSourceItem }}">
+              <view>default slot & default value</view>
+            </slot>
+          </block>
+        </el-table-column>
+      </view>
     </view>
   </view>
-  <view class="el-table__body-wrapper">
-    <view class="el-table__body">
-      <view class="el-table__row is-leaf">
-        <view class="el-table__column">
-          <view class="cell">2016-05-02</view>
-        </view>
-        <view class="el-table__column">
-          <view class="cell">王小虎</view>
-        </view>
-        <view class="el-table__column">
-          <view class="cell">上海市普陀区金沙江路 1518 弄</view>
-        </view>
-      </view>
-      <view class="el-table__row is-leaf">
-        <view class="el-table__column">
-          <view class="cell">2016-05-02</view>
-        </view>
-        <view class="el-table__column">
-          <view class="cell">王小虎</view>
-        </view>
-        <view class="el-table__column">
-          <view class="cell">上海市普陀区金沙江路 1518 弄</view>
-        </view>
-      </view>
-      <view class="el-table__row">
-        <view class="el-table__column">
-          <view class="cell">2016-05-02</view>
-        </view>
-        <view class="el-table__column">
-          <view class="cell">王小虎</view>
-        </view>
-        <view class="el-table__column">
-          <view class="cell">上海市普陀区金沙江路 1518 弄</view>
-        </view>
-      </view>
-    </view>
+  <view a:else class="el-table__empty-block is-leaf">
+    <text class="el-table__empty-text">暂无数据</text>
   </view>
 </view>

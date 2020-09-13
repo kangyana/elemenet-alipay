@@ -7,7 +7,9 @@
     ${plain ? 'is-plain' : '' }
     ${round ? 'is-round' : '' }
     ${circle ? 'is-circle' : '' }
+    ${customClass}
   `}}"
+  style="{{customStyle}}"
   onTap="tap"
 >
   <text a:if="{{ loading }}" class="el-icon-loading" />

@@ -3,7 +3,7 @@
   text-align: center;
   line-height: 48px;
 }
-.is-active {
+.el-menu-item.is-active {
   color: #409EFF;
   background: #ecf5ff;
 }

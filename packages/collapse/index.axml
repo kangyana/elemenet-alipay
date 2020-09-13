@@ -1,0 +1,7 @@
+<view
+  class="el-collapse"
+  role="tablist"
+  aria-multiselectable="true"
+>
+  <slot />
+</view>

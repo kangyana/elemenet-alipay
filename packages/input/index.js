@@ -12,12 +12,18 @@ Component({
     disabled: false,
     prefixIcon: '',
     suffixIcon: '',
+    customClass: '',
+    customStyle: '',
+    dataset: null,
   },
   methods: {
     handleInput(e) {
-      const { onInput } = this.props
+      const { onInput, dataset } = this.props
+      const { value } = e.detail
+      e.target.dataset = dataset
+      e.currentTarget.dataset = dataset
       if (onInput) {
-        onInput(e.detail.value)
+        onInput(value, e)
       }
     },
     focus(e) {

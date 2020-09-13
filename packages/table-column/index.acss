@@ -1,0 +1,23 @@
+.el-table__column {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 12px 0;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.el-table .cell {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-all;
+  line-height: 23px;
+}

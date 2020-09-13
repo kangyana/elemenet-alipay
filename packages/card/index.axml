@@ -1,0 +1,22 @@
+<view
+  class="el-card {{`
+    ${customClass}
+  `}}"
+  style="{{customStyle}}"
+>
+  <view
+    a:if="{{title}}"
+    class="el-card__header"
+    style="{{
+      title === 'none' ? 'display: none;' : ''
+    }}"
+  >
+    {{title}}
+  </view>
+  <view a:else class="el-card__header">
+    <slot name="header" />
+  </view>
+  <view class="el-card__body">
+    <slot />
+  </view>
+</view>

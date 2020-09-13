@@ -1,7 +1,7 @@
-const slots = (e) => {
-  console.log(e)
+const slot = (columns) => {
+  return 
 }
 
 export default {
-  slots
+  slot
 }

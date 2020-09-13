@@ -1,6 +1,6 @@
 .el-input {
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   display: inline-block;
   width: 180px;
 }
@@ -12,7 +12,7 @@
   box-sizing: border-box;
   color: #606266;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   height: 40px!important;
   line-height: 40px;
   outline: none;
@@ -35,16 +35,16 @@
   display: inline-block;
   width: 414px;
   vertical-align: bottom;
-  font-size: 14px;
+  font-size: 12px;
 }
 .el-textarea__inner {
   display: block;
   resize: vertical;
-  padding: 5px;
+  padding: 5px 10px;
   line-height: 1.5;
   box-sizing: border-box;
   width: 100%;
-  font-size: inherit;
+  font-size: inherit!important;
   color: #606266;
   background-color: #fff;
   background-image: none;

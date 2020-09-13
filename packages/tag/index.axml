@@ -1,0 +1,10 @@
+<view
+  class="el-tag {{`
+    el-tag--${type}
+    ${customClass}
+  `}}"
+  style="{{customStyle}}"
+  onTap="tap"
+>
+  <slot />
+</view>

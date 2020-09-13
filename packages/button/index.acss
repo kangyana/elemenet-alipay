@@ -82,7 +82,7 @@
   padding: 12px;
 }
 .el-button.is-disabled, .el-button.is-disabled:focus, .el-button.is-disabled:hover {
-  color: #c0c4cc;
+  color: #c0c4cc!important;
   cursor: not-allowed;
   background-image: none;
   background-color: #fff;
@@ -229,4 +229,19 @@
 }
 .el-button [class*=el-icon-]+.content {
   margin-left: 5px;
+}
+.el-button--medium {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.el-button--small {
+  padding: 9px 15px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.el-button--mini {
+  padding: 7px 15px;
+  font-size: 12px;
+  border-radius: 3px;
 }

@@ -5,7 +5,9 @@
     ${disabled ? 'is-disabled' : ''}
     ${prefixIcon ? 'el-input--prefix' : ''}
     ${suffixIcon ? 'el-input--suffix' : ''}
+    ${customClass}
   `}}"
+  style="{{customStyle}}"
 >
   <block a:if="{{ type !== 'textarea' }}">
     <view
@@ -47,7 +49,6 @@
     maxLength="{{ maxlength }}"
     placeholder="{{ placeholder }}"
     trim="{{ trim }}"
-    autoHeight="{{ autoHeight }}"
     onFocus="{{ focus }}"
     onBlur="{{ blur }}"
   />

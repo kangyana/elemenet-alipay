@@ -1,3 +1,6 @@
 {
-  "component": true
+  "component": true,
+  "usingComponents": {
+    "el-table-column": "/components/table-column/index"
+  }
 }

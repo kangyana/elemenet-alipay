@@ -1,14 +1,7 @@
 Component({
   props: {
+    columns: [],
     dataSource: [],
     border: false,
   },
-  data: {
-  },
-  methods: {
-
-  },
-  didMount() {
-    console.log(this)
-  }
 })

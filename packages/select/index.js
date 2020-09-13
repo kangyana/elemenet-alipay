@@ -4,16 +4,19 @@ Component({
     disabled: '',
     placeholder: '请选择',
     dataSource: [],
+    dataset: null,
   },
   data: {
     optionsVisible: false,
   },
   methods: {
     handleInput(e) {
-      const { onInput } = this.props
+      const { onInput, dataset } = this.props
       const { value } = e.target.dataset.row
+      e.target.dataset = dataset
+      e.currentTarget.dataset = dataset
       if (onInput) {
-        onInput(value)
+        onInput(value, e)
       }
     },
     handleOptions() {

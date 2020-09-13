@@ -1,0 +1,36 @@
+<view
+  class="el-collapse-item {{`
+    ${isActive ? 'is-active': ''}
+  `}}"
+>
+  <view
+    role="tab"
+    aria-expanded="{{isActive}}"
+    aria-controls="el-collapse-content-{{id}}"
+    aria-describedby ="el-collapse-content-{{id}}"
+    onTap="handleActive"
+  >
+    <view
+      class="el-collapse-item__header {{`
+        ${isActive ? 'is-active': ''}
+      `}}"
+      role="button"
+      id="el-collapse-head-{{id}}"
+      tabindex="{{0}}"
+    >
+      {{title}}
+      <view class="el-collapse-item__arrow el-icon-arrow-up {{ isActive ?　'is-reverse' : '' }}"></view>
+    </view>
+  </view>
+  <view
+    hidden="{{!isActive}}"
+    class="el-collapse-item__wrap"
+    role="tabpanel"
+    aria-labelledby="el-collapse-head-{{id}}"
+    id="el-collapse-content-{{id}}"
+  >
+    <view class="el-collapse-item__content">
+      <slot />
+    </view>
+  </view>
+</view>

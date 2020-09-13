@@ -1,0 +1,37 @@
+.el-collapse-item__header {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  line-height: 48px;
+  background-color: #fff;
+  color: #303133;
+  cursor: pointer;
+  border-bottom: 1px solid #ebeef5;
+  transition: border-bottom-color .3s;
+  outline: none;
+  font-weight: 700;
+}
+.el-collapse-item__header.is-active {
+  border-bottom-color: transparent;
+}
+.el-collapse-item__arrow {
+  margin: 0 8px 0 auto;
+  transition: transform .3s;
+  font-weight: 300;
+  transform: rotate(90deg);
+}
+.el-collapse-item__arrow.is-reverse {
+  transform: rotate(180deg);
+}
+.el-collapse-item__wrap {
+  will-change: height;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebeef5;
+}
+.el-collapse-item__content {
+  padding-bottom: 25px;
+  color: #303133;
+  line-height: 1.769230769230769;
+}

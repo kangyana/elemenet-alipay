@@ -11,13 +11,17 @@ Component({
     plain: false,
     round: false,
     circle: false,
-    icon: ''
+    icon: '',
+    dataset: null,
+    customClass: '',
+    customStyle: '',
   },
   methods: {
     tap(e) {
-      const { disabled } = this.props
+      const { disabled, onTap, dataset } = this.props
       if (disabled) return
-      const { onTap } = this.props
+      e.target.dataset = dataset
+      e.currentTarget.dataset = dataset
       if (onTap) {
         onTap(e)
       }

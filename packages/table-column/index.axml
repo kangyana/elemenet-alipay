@@ -1,0 +1,5 @@
+<view class="el-table__column" style="{{width ? `flex: 0 0 ${width}px` : ''}}">
+  <view class="cell">
+    <slot />
+  </view>
+</view>
